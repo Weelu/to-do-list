@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="text-align: center;">
+    
+    <h3 style="background-color: antiquewhite; display: inline-block; padding: 2%; border-radius: 5%;">criador de lista de coisas pra fazer:</h3> <br>
+
+    <div style="background-color: antiquewhite; display: inline-block; padding: 2%; border-radius: 5%;">
+    <input type="text" id="input" placeholder="escreve algo">
+    <button onclick="cria()">e adiciona</button>
+    </div>
+
+    
+    
+    <div id="div"></div>
+    
+   
+    
+    
+    <script>
+
+        input 
+        
+
+        function cria(){
+          
+            const imputado = document.getElementById("input").value;
+            document.getElementById("div").innerHTML += '<div style="background-color: antiquewhite; display: inline-block; padding: 2%; border-radius: 5%; margin: 2%" ><input type="checkbox"  id="">'+imputado+' <button onclick="oblitera()">apaga</button><br></div>'  ;
+    
+        }
+
+        function oblitera(){
+            
+            const element = document.activeElement.parentElement;
+            element.remove();
+
+        }
+
+
+
+    </script>
+
+</body>
+</html>
